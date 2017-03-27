@@ -1,0 +1,8 @@
+---
+   - hosts: all
+     tasks:
+        - name: Create file1 and file2 in tmp directory
+          command: "{{item}}"
+          with_items:
+             - touch /tmp/file1
+             - touch /tmp/file2
